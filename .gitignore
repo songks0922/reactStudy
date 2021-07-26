@@ -1,0 +1,37 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+./css1-normal/node_modules
+./live/node_modules
+./spa1/node_modules
+./spa1/public
+./webpack/node_modules
+./3장/1-element/2-state/node_modules
+/babel/node_modules/
+/webpack/node_modules/
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+babel/package-lock.json
+babel/package.json
+babel/react-dom.development.js
+babel/react.development.js
+webpack/package-lock.json
+webpack/package.json
+3장/.vscode/c_cpp_properties.json
+3장/.vscode/settings.json
