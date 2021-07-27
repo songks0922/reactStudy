@@ -35,3 +35,5 @@ webpack/package-lock.json
 webpack/package.json
 3장/.vscode/c_cpp_properties.json
 3장/.vscode/settings.json
+.vscode/c_cpp_properties.json
+.vscode/settings.json
