@@ -1,18 +1,18 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-// import App from './App';
+
 function App() {
   const [pageName, setPageName] = useState('');
   useEffect(() => {
     window.onpopstate = function (event) {
       setPageName(event.state);
+      console.log(`location: ${document.location}, state: ${event.state}`);
     };
   }, []);
 
   function onClick1() {
     const pageName = 'page1';
-    window.history.pushState(pageName, '', '/page1');
+    window.history.replaceState(pageName, '', '/page1');
     setPageName(pageName);
   }
 
@@ -23,12 +23,8 @@ function App() {
   }
   return (
     <div>
-      <button onClick={onClick1}>
-        page1
-      </button>
-      <button onClick={onClick2}>
-        page2
-      </button>
+      <button onClick={onClick1}>page1</button>
+      <button onClick={onClick2}>page2</button>
       {!pageName && <Home />}
       {pageName === 'page1' && <Page1 />}
       {pageName === 'page2' && <Page2 />}
@@ -37,7 +33,7 @@ function App() {
 }
 
 function Home() {
-  return <h2>여기는 홈페이지입니다. 원하는 페이지 버튼을 클릭하세요.</h2>;
+  return <h2>여기는 홈페이지입니다. 원하는 페이지 버튼을 클릭하세요!</h2>;
 }
 
 function Page1() {
@@ -52,5 +48,5 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
