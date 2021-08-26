@@ -12,7 +12,7 @@ function App() {
 
   function onClick1() {
     const pageName = 'page1';
-    window.history.replaceState(pageName, '', '/page1');
+    window.history.pushState(pageName, '', '/page1');
     setPageName(pageName);
   }
 
