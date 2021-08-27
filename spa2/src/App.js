@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import Rooms from './Rooms';
+import * as style from './styles';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/photo" component={Photo} />
         <Route path="/rooms" component={Rooms} />
       </div>
+      <style.subDiv>ㅁ</style.subDiv>
     </BrowserRouter>
   );
 }
