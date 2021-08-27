@@ -15,7 +15,7 @@ export default function Rooms({ match }) {
         // exact가 있으면 /rooms/ 일 경우에만 랜더링
         exact
         path={match.url}
-        render={() => <h3>방을 선택해 주세요.</h3>}
+        render={() => <h3>방을 선택해 주세요..</h3>}
       />
     </div>
   );
