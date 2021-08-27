@@ -13,7 +13,7 @@ export default function App() {
         <Link to="/rooms">방소개</Link>
         <br />
         <Route exact path="/" component={Home} />
-        <Route path="/photh" component={Photo} />
+        <Route path="/photo" component={Photo} />
         <Route path="/rooms" component={Rooms} />
       </div>
     </BrowserRouter>
