@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 예제 요소 -->
+    <span id="test1"></span><br />
+    <span id="test2">ss</span>
+    <script>
+      // id가 test1인 요소를 선택한다.
+      var $test1 = document.getElementById('test1');
+      // id가 test2인 요소를 선택한다.
+      var $test2 = document.getElementById('test2');
+      // innerHTML은 태그 요소의 안쪽 html, 즉 <span></span>을 포함하지 않는 html를 재설정하는 것
+      $test1.innerHTML = "<input type='text' id='test3'>";
+      // outerHTM은 태그 요소를 포함한 html, 즉 <span></span>을 포함하여 html를 재설정하는 것
+      $test2.outerHTML = "<input type='text' id='test4'>";
+      // span#span1에서 id가 test3인 input을 설정했는데 그것을 재선택.
+      var $test3 = document.getElementById('test3');
+      // span#span2에서 id가 test4인 input을 설정했는데 그것을 재선택.
+      var $test4 = document.getElementById('test4');
+      // id가 test3인 요소에 value을 설정
+      $test3.value = 'hello world';
+      // id가 test4인 요소에 value을 설정
+      $test4.value = 'good morning';
+    </script>
+  </body>
+</html>
