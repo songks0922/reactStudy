@@ -1,5 +1,5 @@
 const element = (
-  <a key="key1" style={{width:100}} href="http://google.com">
+  <a key="key1" style={{ width: 100 }} href="http://google.com">
     click here
   </a>
 );
@@ -14,5 +14,5 @@ const consoleLogResult = {
       width: 100,
     },
     children: 'click here',
-  }
-}
+  },
+};
