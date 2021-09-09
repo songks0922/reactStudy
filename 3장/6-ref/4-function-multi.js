@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
 
 export default function App() {
-  const boxListRef = useRef();
+  const boxListRef = useRef({});
+
   return (
     <div>
       <div
@@ -15,6 +16,7 @@ export default function App() {
         {BOX_LIST.map((item) => (
           <div
             key={item.id}
+            ref={(ref) => (boxListRef.current[item.id] = ref)}
             style={{
               flex: '0 0 auto',
               width: item.width,
