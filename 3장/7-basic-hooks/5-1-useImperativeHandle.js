@@ -1,16 +1,9 @@
-import React, {
-  forwardRef,
-  useEffect,
-  useImperativeHandle,
-  useState,
-} from 'react';
+import React, { forwardRef, useImperativeHandle, useState } from 'react';
 
 function Profile(_, ref) {
   const [name, setName] = useState('mike');
   const [age, setAge] = useState(0);
-  useEffect(() => {
-    setName('temp');
-  }, []);
+
   useImperativeHandle(ref, () => ({
     addAge: (value) => setAge(age + value),
     getNameLength: () => name.length,
