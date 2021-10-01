@@ -10,6 +10,7 @@
 /babel/node_modules/
 /webpack/node_modules/
 .pnp.js
+/6-chapter
 
 # testing
 /coverage
